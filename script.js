@@ -14,8 +14,15 @@ document.querySelector('#criar-tarefa').addEventListener('click', addTarefa);
 // colocar fundo cinza quando clicar
 function addCor(evento) {
     const cor = evento.target;
-    const lista = document.querySelector('li');
+    const lista = document.getElementsByTagName('li');
+    // seleciona somente um por vez
+      for (let index = 0; index < lista.length; index += 1) {
+        lista[index].style.backgroundColor = 'white';
+        lista[index].classList.remove('selecionado');
+
+    }
     cor.classList.add('selecionado');
-    cor.style.backgroundColor = 'grey'
+    cor.style.backgroundColor = 'gray';
 }
 listaTarefas.addEventListener('click', addCor);
+
