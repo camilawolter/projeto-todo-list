@@ -1,10 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 
 * {
-    margin-top: 15px;
     font-family:"Open Sans", sans-serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    border: 2px solid rgb(139, 91, 51);
+    border-radius: 30px;
+}
+
+#title {
+    margin-top: 50px;
+    color: rgb(110, 80, 56);
+}
+
+p {
+    color: rgba(128, 128, 128, 0.623);
+    font-style: italic;
+    margin-top: 0;
+}
+
+button {
+    border: 1px solid rgb(139, 91, 51);
+    border-radius: 5px;
+    background-color: rgb(240, 171, 116);
+    color: rgb(110, 80, 56);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#texto-tarefa {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid  rgb(139, 91, 51);
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .completed {
     text-decoration: line-through solid black;
+}
+
+.selecionado {
+    border-radius: 5%;
+    padding: 5px;
 }
