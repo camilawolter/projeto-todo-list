@@ -26,3 +26,14 @@ function addCor(evento) {
 }
 listaTarefas.addEventListener('click', addCor);
 
+// clicar duas vezes risca o item - revome 
+function removerCompleto(evento) {
+    const completo = evento.target;
+    if (completo.className.includes('completed')) {
+      completo.remove();
+    } else {
+      completo.className = 'completed';
+    }
+}
+  
+listaTarefas.addEventListener('dblclick', removerCompleto);
