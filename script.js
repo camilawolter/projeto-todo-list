@@ -57,3 +57,13 @@ function limparCompletos() {
     }
 }
 apagaCompletos.addEventListener('click', limparCompletos);
+
+// remover elementos selecionados
+const apagaSelecionados = document.querySelector('#remover-selecionado');
+function limparSelecionados() {
+    const tarefasSelecionadas = document.querySelectorAll('.selecionado');
+    for (let index = 0; index < tarefasSelecionadas.length; index += 1) {
+        tarefasSelecionadas[index].remove();
+    }
+}
+apagaSelecionados.addEventListener('click', limparSelecionados);
