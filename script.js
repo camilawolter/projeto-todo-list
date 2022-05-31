@@ -39,11 +39,21 @@ function removerCompleto(evento) {
 listaTarefas.addEventListener('dblclick', removerCompleto);
 
 // limpar toda a lista
-const apaga = document.querySelector('#apaga-tudo');
+const apagaListaTudo = document.querySelector('#apaga-tudo');
 function limparlista() {
     const tarefas = document.querySelectorAll('.tarefa');
     for (let index = 0; index < tarefas.length; index += 1) {
         tarefas[index].remove();
     }
 }
-apaga.addEventListener('click', limparlista);
+apagaListaTudo.addEventListener('click', limparlista);
+
+// remover elementos só os finalizados
+const apagaCompletos = document.querySelector('#remover-finalizados');
+function limparCompletos() {
+    const tarefasCompletas = document.querySelectorAll('.completed');
+    for (let index = 0; index < tarefasCompletas.length; index += 1) {
+        tarefasCompletas[index].remove();
+    }
+}
+apagaCompletos.addEventListener('click', limparCompletos);
