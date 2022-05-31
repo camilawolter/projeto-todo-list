@@ -11,8 +11,12 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 10px;
+}
+
+div {
     border: 2px solid rgb(139, 91, 51);
     border-radius: 30px;
+    margin: 50px;
 }
 
 #title {
@@ -23,7 +27,7 @@ body {
 p {
     color: rgba(128, 128, 128, 0.623);
     font-style: italic;
-    margin-top: 0;
+    margin: 0 10px 15px 10px;
 }
 
 button {
@@ -33,7 +37,7 @@ button {
     color: rgb(110, 80, 56);
     text-align: center;
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #texto-tarefa {
