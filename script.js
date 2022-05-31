@@ -1,5 +1,6 @@
 // criando tarefas e adicionando em lista ordenada
 const listaTarefas = document.querySelector('#lista-tarefas');
+const criaTarefa = document.querySelector('#criar-tarefa');
 
 function addTarefa() {
     const textoTarefa = document.querySelector('#texto-tarefa');
@@ -9,7 +10,7 @@ function addTarefa() {
     listaTarefas.appendChild(li);
     textoTarefa.value = '';
 }
-document.querySelector('#criar-tarefa').addEventListener('click', addTarefa);
+criaTarefa.addEventListener('click', addTarefa);
 
 // colocar fundo cinza quando clicar
 function addCor(evento) {
@@ -35,5 +36,14 @@ function removerCompleto(evento) {
       completo.className = 'completed';
     }
 }
-  
 listaTarefas.addEventListener('dblclick', removerCompleto);
+
+// limpar toda a lista
+const apaga = document.querySelector('#apaga-tudo');
+function limparlista() {
+    const tarefas = document.querySelectorAll('.tarefa');
+    for (let index = 0; index < tarefas.length; index += 1) {
+        tarefas[index].remove();
+    }
+}
+apaga.addEventListener('click', limparlista);
